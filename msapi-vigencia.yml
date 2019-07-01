@@ -5,7 +5,7 @@ springfox:
         path: /api-docs
 server:
   contextPath: /salud/msapi-vigencia/v1
-  port: 7062
+  port: 7761
 spring:
   jackson:
     date-format: mx.gob.imss.cit.api.vigencia.RFC3339DateFormat
