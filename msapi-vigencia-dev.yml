@@ -1,0 +1,26 @@
+springfox:
+  documentation:
+    swagger:
+      v2:
+        path: /api-docs
+server:
+  contextPath: /salud/msapi-vigencia/v1
+#  port: 7060
+  port: "${PORT}"
+  
+spring:
+  jackson:
+    date-format: mx.gob.imss.cit.api.vigencia.RFC3339DateFormat
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+
+  application:
+    name: msapi-vigencia
+
+  profiles:
+    active: "${activatedProperties}"
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/     
