@@ -7,7 +7,6 @@ server:
   contextPath: /salud/msapi-vigencia/v1
   port: ${port:8282}
   #port: "${PORT}"
-  #  port: 7060
   
 spring:
   jackson:
