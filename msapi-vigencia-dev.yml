@@ -5,7 +5,7 @@ springfox:
         path: /api-docs
 server:
   contextPath: /salud/msapi-vigencia/v1
-  port: "${PORT}"
+  port: ${port}
   #  port: 7060
   
 spring:
