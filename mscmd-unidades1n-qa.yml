@@ -5,7 +5,7 @@ springfox:
         path: /api-docs
         
 server:
-  contextPath: /salud/msomt-unidades1n/v1 
+  contextPath: /salud/mscmd-unidades1n/v1 
   port: ${port}
   #port: 9070
   
@@ -22,7 +22,7 @@ spring:
       database: UNIDAD_MEDICA
 
   application:
-    name: msomt-unidades1n
+    name: mscmd-unidades1n
   
   profiles:
     active: "${activatedProperties}" 
