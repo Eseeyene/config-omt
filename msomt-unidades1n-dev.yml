@@ -7,7 +7,7 @@ springfox:
 server:
   contextPath: /salud/msomt-unidades1n/v1 
   #port: ${port:8283}
-  port: "${PORT}"
+  port: ${port}
   
 spring:
   jackson:
