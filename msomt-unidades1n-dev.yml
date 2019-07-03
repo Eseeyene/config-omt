@@ -5,7 +5,7 @@ springfox:
         path: /api-docs
         
 server:
-  contextPath: /salud/api-unidades1n/v1 
+  contextPath: /salud/msomt-unidades1n/v1 
   port: ${port:8283}
   #port: "${PORT}"
   
