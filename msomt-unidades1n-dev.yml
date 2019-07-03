@@ -7,7 +7,6 @@ springfox:
 server:
   contextPath: /salud/api-unidades1n/v1 
   port: "${PORT}"
-  #port: 9070
   
 spring:
   jackson:
