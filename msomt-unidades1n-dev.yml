@@ -1,0 +1,35 @@
+springfox:
+  documentation:
+    swagger:  
+      v2:
+        path: /api-docs
+        
+server:
+  contextPath: /salud/api-unidades1n/v1 
+  port: "${PORT}"
+  #port: 9070
+  
+spring:
+  jackson:
+    date-format: mx.gob.imss.cit.api.unidades1n.RFC3339DateFormat
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+
+  data:
+    mongodb:
+      host: 172.16.164.15
+      port: 27017
+      database: UNIDAD_MEDICA
+
+  application:
+    #name: api-unidades1n
+    name: msomt-unidades1n
+  
+  profiles:
+    active: "${activatedProperties}" 
+    
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/ 
+
