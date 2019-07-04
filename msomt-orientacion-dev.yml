@@ -1,0 +1,39 @@
+springfox:
+  documentation:
+    swagger:
+      v2:
+        path: /api-docs       
+
+server:
+  contextPath: /salud/msomt-orientacion/v1  
+  port: ${port}
+  #port: 9060
+  
+spring:
+  jackson:
+    date-format: mx.gob.imss.cit.api.omt.RFC3339DateFormat
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+  application:
+    name: msomt-orientacion
+  profiles:
+    active: "${activatedProperties}" 
+    
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+
+##ENDOPOINTS MS OMT
+#ENDPOINT_VIGENCIA: http://localhost:9060/salud/msomt-vigencia/v1/vigencia/
+#ENDPOINT_UNIDADES: http://localhost:9070/salud/mscmd-unidades1n/v1/unidades/
+ENDPOINT_VIGENCIA: "${uri_vigencia}"
+ENDPOINT_UNIDADES: "${uri_unidades}"
+
+
+##########- TIME OUT CONEXION EN MILISEGUNDOS -##########
+URI_VIGENCIA_TIMEOUTCONNECTION: 5000
+URI_VIGENCIA_TIMEOUTREADER: 5000
+URI_UNIDAD_TIMEOUTCONNECTION: 4000
+URI_UNIDAD_TIMEOUTREADER: 2000
+
