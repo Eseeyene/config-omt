@@ -7,7 +7,6 @@ springfox:
 server:
   contextPath: /salud/msomt-orientacion/v1  
   port: ${port}
-  #port: 9060
   
 spring:
   jackson:
@@ -25,14 +24,17 @@ eureka:
       defaultZone: http://172.16.168.80:7001/eureka/, http://172.16.168.80:7002/eureka/
 
 ##ENDOPOINTS MS OMT
-#ENDPOINT_VIGENCIA=http://localhost:9060/salud/api-vigencia/v1/vigencia/
-#ENDPOINT_UNIDADES=http://localhost:9070/salud/api-unidades1n/v1/unidades/
-ENDPOINT_VIGENCIA: http://localhost:9060/salud/msomt-vigencia/v1/vigencia/
-ENDPOINT_UNIDADES: http://localhost:9070/salud/mscmd-unidades1n/v1/unidades/
+#ENDPOINT_VIGENCIA: "${uri_vigencia}"
+#ENDPOINT_UNIDADES: "${uri_unidades}"
+ENDPOINT_VIGENCIA: http://172.16.168.73:9003/salud/msomt-vigencia/v1/vigencia/ 
+ENDPOINT_UNIDADES: http://172.16.168.73:9001/salud/mscmd-unidades1n/v1/unidades/ 
+
+
 
 ##########- TIME OUT CONEXION EN MILISEGUNDOS -##########
 URI_VIGENCIA_TIMEOUTCONNECTION: 5000
 URI_VIGENCIA_TIMEOUTREADER: 5000
 URI_UNIDAD_TIMEOUTCONNECTION: 4000
 URI_UNIDAD_TIMEOUTREADER: 2000
+
 
