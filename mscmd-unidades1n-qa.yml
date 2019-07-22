@@ -7,7 +7,6 @@ springfox:
 server:
   contextPath: /salud/mscmd-unidades1n/v1 
   port: ${port}
-  #port: 9070
   
 spring:
   jackson:
@@ -20,7 +19,9 @@ spring:
       host: 172.16.164.15
       port: 27017
       database: UNIDAD_MEDICA
-
+      username: UNME_USER
+      password: imss2013
+      
   application:
     name: mscmd-unidades1n
   
@@ -29,6 +30,6 @@ spring:
     
 eureka:
   client:
-    serviceUrl: 
+    serviceUrl:
       defaultZone: http://172.16.168.80:7001/eureka/, http://172.16.168.80:7002/eureka/
 
