@@ -4,10 +4,9 @@ springfox:
       v2:
         path: /api-docs
 server:
-  contextPath: /salud/msapi-vigencia/v1
-  port: ${port}
-  #port: ${port:8282}
-  #port: "${PORT}"
+  contextPath: /salud/msomt-vigencia/v1
+  port: ${port}  
+  #  port: 7061
   
 spring:
   jackson:
@@ -16,12 +15,13 @@ spring:
       WRITE_DATES_AS_TIMESTAMPS: false
 
   application:
-    name: msapi-vigencia
-
+    name: msomt-vigencia
+    
   profiles:
-    active: "${activatedProperties}"
-
+    active: "${activatedProperties}" 
+ 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:1111/eureka/     
+      defaultZone: http://172.16.168.80:7001/eureka/, http://172.16.168.80:7002/eureka/
+ 
