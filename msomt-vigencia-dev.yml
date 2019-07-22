@@ -6,6 +6,8 @@ springfox:
 server:
   contextPath: /salud/msomt-vigencia/v1
   port: ${port}
+#  port: 7060
+
   
 spring:
   jackson:
@@ -23,6 +25,7 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:1111/eureka/        
+     
             
       
       
