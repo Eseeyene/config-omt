@@ -1,0 +1,35 @@
+springfox:
+  documentation:
+    swagger:  
+      v2:
+        path: /api-docs        
+server: 
+  contextPath: /salud/mstooad-catalogos/v1
+  port: ${port} 
+  
+spring:
+  jackson:
+    date-format: mx.gob.imss.cit.api.tooadcatalogo.RFC3339DateFormat
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false     
+
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://172.16.162.42:3306/scoreimss
+    username: root
+    password: 
+    
+    
+
+  application:
+    name: mstooad-catalogos
+  
+  profiles:
+    active: "${activatedProperties}" 
+    
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/ 
+
+  
