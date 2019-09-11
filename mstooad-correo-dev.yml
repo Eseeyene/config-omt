@@ -1,0 +1,49 @@
+spring:
+  application:
+    name: mstooad-correo
+
+
+  mail:
+    host: relay.imss.gob.mx     
+    port: 25
+    username: convocatoria.tooad@imss.gob.mx
+    password: 
+
+    properties:
+      mail:
+        smtp:
+          auth: true
+          socketFactory:
+            port: 25
+            class: javax.net.ssl.SSLSocketFactory
+            fallback: false
+
+
+    default-encoding: UTF-8                
+    #      starttls:
+    #        enable: true
+    #protocol: smtp    
+
+  
+  profiles:
+    active: "${activatedProperties}" 
+    
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/ 
+
+         
+server:
+  port: 2080
+  use-forward-headers: true
+
+  
+logging:
+  path: logs
+  file: mstooad-correo.log
+  level:
+    root: INFO
+    mx.gob.imss.cit.dacvasa: INFO
+
+
