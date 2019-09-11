@@ -34,8 +34,8 @@ eureka:
       defaultZone: http://localhost:1111/eureka/ 
 
          
-server:
-  port: 2080
+server: 
+  port: ${port}
   use-forward-headers: true
 
   
